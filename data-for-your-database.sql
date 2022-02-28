@@ -27,19 +27,56 @@ SET time_zone = "+00:00";
 -- Table structure for table `categories`
 --
 
-CREATE TABLE `categories` (
+CREATE DATABASE IF NOT EXISTS `discussions_forum` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `discussions_forum`;
+
+CREATE TABLE IF NOT EXISTS `categories` (
   `categoryID` int(11) NOT NULL,
-  `categoryName` varchar(255) NOT NULL
+  `categoryName` varchar(255) NOT NULL,
+  PRIMARY KEY (`categoryID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `userID` int(5) NOT NULL,
+  `userName` varchar(100),
+  `profPic` varchar(255),
+  `dateOfCreation` datetime,
+  `bio` varchar(500),
+  PRIMARY KEY (`userID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `forumPosts` (
+  `postID` int(5) NOT NULL,
+  `categoryID` int(11) NOT NULL,
+  `userID` int(5) NOT NULL,
+  `postContent` varchar(500),
+  `postTitle` varchar(100),
+  `postImage` varchar(255),
+  `upVotes` int(5),
+  `downVotes` int(5),
+  `postDate` datetime,
+  `postViews` int(5),
+  PRIMARY KEY (`postID`),
+  FOREIGN KEY (`categoryID`) REFERENCES `categories` (`categoryID`),
+  FOREIGN KEY (`userID`) REFERENCES `users` (`userID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `forumReplies` (
+  `replyID` int(5) NOT NULL,
+  `postID` int(5) NOT NULL,
+  `userID` int(5) NOT NULL,
+  `replyContent` varchar(500),
+  `replyImage` varchar(255),
+  PRIMARY KEY (`replyID`),
+  FOREIGN KEY (`postID`) REFERENCES `forumPosts`(`postID`),
+  FOREIGN KEY (`userID`) REFERENCES `users` (`userID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `categories`
 --
 
-INSERT INTO `categories` (`categoryID`, `categoryName`) VALUES
-(1, 'Category 1'),
-(2, 'Category 2'),
-(3, 'Category 3');
+
 
 -- --------------------------------------------------------
 
@@ -47,6 +84,7 @@ INSERT INTO `categories` (`categoryID`, `categoryName`) VALUES
 -- Table structure for table `records`
 --
 
+/*
 CREATE TABLE `records` (
   `recordID` int(11) NOT NULL,
   `categoryID` int(11) NOT NULL,
@@ -54,6 +92,7 @@ CREATE TABLE `records` (
   `price` decimal(10,2) NOT NULL,
   `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 --
 -- Dumping data for table `records`
@@ -73,6 +112,7 @@ INSERT INTO `records` (`recordID`, `categoryID`, `name`, `price`, `image`) VALUE
 (11, 3, 'Some text', '17.00', '835545.jpg'),
 (12, 3, 'Some text', '19.00', '119273.jpg');
 
+
 --
 -- Indexes for dumped tables
 --
@@ -80,6 +120,7 @@ INSERT INTO `records` (`recordID`, `categoryID`, `name`, `price`, `image`) VALUE
 --
 -- Indexes for table `categories`
 --
+
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`categoryID`);
 
@@ -105,6 +146,7 @@ ALTER TABLE `categories`
 ALTER TABLE `records`
   MODIFY `recordID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
+*/
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
