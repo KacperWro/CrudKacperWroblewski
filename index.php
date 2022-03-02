@@ -29,9 +29,9 @@ $categories = $statement2->fetchAll();
 $statement2->closeCursor();
 
 // Get records for selected category
-$queryRecords = "SELECT * FROM records
+$queryRecords = "SELECT * FROM forumPosts
 WHERE categoryID = :category_id
-ORDER BY recordID";
+ORDER BY postID";
 $statement3 = $db->prepare($queryRecords);
 $statement3->bindValue(':category_id', $category_id);
 $statement3->execute();
@@ -64,33 +64,17 @@ include('includes/header.php');
 <h2><?php echo $category_name; ?></h2>
 <table>
 <tr>
-<th>Image</th>
-<th>Name</th>
-<th>Price</th>
-<th>Delete</th>
-<th>Edit</th>
+<th>Content</th>
+<th>Title</th>
+<th>Date</th>
+
 </tr>
+
 <?php foreach ($records as $record) : ?>
 <tr>
-<td><img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" /></td>
-<td><?php echo $record['name']; ?></td>
-<td class="right"><?php echo $record['price']; ?></td>
-<td><form action="delete_record.php" method="post"
-id="delete_record_form">
-<input type="hidden" name="record_id"
-value="<?php echo $record['recordID']; ?>">
-<input type="hidden" name="category_id"
-value="<?php echo $record['categoryID']; ?>">
-<input type="submit" value="Delete">
-</form></td>
-<td><form action="edit_record_form.php" method="post"
-id="delete_record_form">
-<input type="hidden" name="record_id"
-value="<?php echo $record['recordID']; ?>">
-<input type="hidden" name="category_id"
-value="<?php echo $record['categoryID']; ?>">
-<input type="submit" value="Edit">
-</form></td>
+    <td><?php echo $record['postContent']; ?></td>
+    <td><?php echo $record['postTitle']; ?></td>
+    <td><?php echo $record['postDate']; ?></td>
 </tr>
 <?php endforeach; ?>
 </table>
