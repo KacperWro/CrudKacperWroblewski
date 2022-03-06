@@ -2,7 +2,7 @@
 /* the styles for the html elements */
 
 body {
-    background-color: #ccc;
+    background-color: #f3deb7;
 }
 
 .container {
@@ -10,10 +10,19 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     width: 1000px;
     margin: 0 auto;
-    background-color: white;
+    background-color: #E5C78F;
     border: 1px solid black;
     padding: .5em 2em;
-    margin-top:5em;
+    margin-top:10em;
+}
+
+.container h2{
+    background-color: #86745C;
+    margin-left:-1.65em;
+    margin-right:-12.1em;
+    margin-top:-0.4em;
+    text-align:center;
+    color: black;
 }
 
 header {
@@ -30,6 +39,41 @@ header h1 {
     margin: 0;
     padding: .5em 0;
     color: black;
+}
+
+footer {
+    clear: both;
+}
+
+#realFoot{
+    background-color: #86745C;
+    left:0;
+    right:0;
+    position:absolute;
+    bottom:0;
+    border-top: 2px solid black;
+    text-align: center;
+}
+
+#nav{
+    background-color: #BFA677;
+    position:absolute;
+    width:50%;
+    border-radius:0 0 2em 2em;
+    border-bottom:2px solid black;
+    border-left:2px solid black;
+    border-right:2px solid black;
+    text-align:center;
+    margin-top:-7.2em;
+}
+
+#nav nav ul{
+    text-align: center;
+}
+#nav nav ul li{
+    display: inline-block;
+    padding-top:1em;
+    padding-left:1em;
 }
 
 aside {
@@ -49,16 +93,7 @@ section {
     width: 800PX;
     padding-bottom: 1.5em;
 }
-footer {
-    clear: both;
-    margin-top: 1em;
-    border-top: 2px solid black;
-}
-footer p {
-    text-align: right;
-    font-size: 80%;
-    margin: 1em 0;
-}
+
 h1 {
     font-size: 150%;
     margin: 0;
@@ -89,7 +124,10 @@ a:hover {
 }
 table {
     border: 1px solid black;
+    border-top:2px solid black;
     border-collapse: collapse;
+    width:133%;
+    margin-left:-2em;
 }
 td, th {
     border: 1px dashed black;

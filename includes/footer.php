@@ -1,6 +1,9 @@
 <footer>
-<p>&copy; <?php echo date("Y"); ?> My PHP CRUD App</p>
+<p></p>
 </footer>
 </div><!-- close div container -->
+<footer id="realFoot">
+<p><strong>&copy; <?php echo date("Y"); ?> Kacper CRUD Application</strong></p>
+</footer>
 </body>
 </html>

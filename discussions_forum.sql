@@ -75,8 +75,8 @@ INSERT INTO `users` (`userID`, `userName`, `profPic`, `dateOfCreation`) VALUES
 (1, "dav77-b", "gerflag.png", "2010-01-10" ),
 (2, "Olaf Trygvasson", "usa.png", "2020-03-11"),
 (3, "Traum77", "can.png", "2013-08-13"),
-(4, "Chad497", "egg.jpg", "2010-10-10"),
-(5, "pj74", "moon.jpg", "2015-10-17"),
+(4, "Chad497", "egg.png", "2010-10-10"),
+(5, "pj74", "moon.png", "2015-10-17"),
 (6, "Snoopy826", "dog.jpg", "2011-03-13");
 
 
