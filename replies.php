@@ -2,11 +2,11 @@
 require_once('database.php');
 
 ?>
-<div class="container">
 <?php
 include('includes/header.php');
 ?>
-<section>
+<div class="container">
+
 <!-- display a table of records -->
 <h2>Users</h2>
 <table>
@@ -18,7 +18,6 @@ include('includes/header.php');
 <?php endforeach; ?>
 </table>
 
-</section>
 <?php
 include('includes/footer.php');
 ?>

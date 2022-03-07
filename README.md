@@ -1,4 +1,4 @@
-# students-php-crud
+# Kacper's PHP Discussion Forun CRUD Application
 A starter project for DkIT students on the Server-Side module.
 ### Instructions
 * Create a MySQL database called php-crud in PHP MyAdmin

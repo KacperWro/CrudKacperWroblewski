@@ -2,11 +2,10 @@
 require_once('database.php');
 
 ?>
-<div class="container">
 <?php
 include('includes/header.php');
 ?>
-<section>
+<div class="container">
 <!-- display a table of records -->
 <h2><?php echo $category_name; ?></h2>
 <table>
@@ -19,7 +18,6 @@ include('includes/header.php');
 </table>
 <p><a href="add_record_form.php">Add Record</a></p>
 <p><a href="category_list.php">Manage Categories</a></p>
-</section>
 <?php
 include('includes/footer.php');
 ?>
