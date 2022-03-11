@@ -1,7 +1,5 @@
 <?php
 require_once('database.php');
-
-?><?php
 include('includes/header.php');
 ?>
 <div class="container">

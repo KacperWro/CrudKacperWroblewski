@@ -27,7 +27,9 @@ SET time_zone = "+00:00";
 -- Table structure for table `categories`
 --
 
-CREATE DATABASE IF NOT EXISTS `discussions_forum` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+DROP DATABASE IF EXISTS discussions_forum;
+
+CREATE DATABASE`discussions_forum` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `discussions_forum`;
 
 CREATE TABLE IF NOT EXISTS `categories` (
