@@ -38,6 +38,9 @@ CREATE TABLE IF NOT EXISTS `categories` (
   PRIMARY KEY (`categoryID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+ALTER TABLE `categories`
+  MODIFY `categoryID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 CREATE TABLE IF NOT EXISTS `users` (
   `userID` int(5) NOT NULL,
   `userName` varchar(100),
@@ -57,6 +60,9 @@ CREATE TABLE IF NOT EXISTS `forumPosts` (
   FOREIGN KEY (`categoryID`) REFERENCES `categories` (`categoryID`),
   FOREIGN KEY (`userID`) REFERENCES `users` (`userID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE `forumPosts`
+  MODIFY `postID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 CREATE TABLE IF NOT EXISTS `forumReplies` (
   `replyID` int(5) NOT NULL,
@@ -138,25 +144,6 @@ INSERT INTO `records` (`recordID`, `categoryID`, `name`, `price`, `image`) VALUE
 (11, 3, 'Some text', '17.00', '835545.jpg'),
 (12, 3, 'Some text', '19.00', '119273.jpg');
 
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `categories`
---
-
-ALTER TABLE `categories`
-  ADD PRIMARY KEY (`categoryID`);
-
---
--- Indexes for table `records`
---
-ALTER TABLE `records`
-  ADD PRIMARY KEY (`recordID`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 

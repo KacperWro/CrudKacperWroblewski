@@ -16,25 +16,41 @@ $currentID = $currentCategory['categoryID'];
 
 
 ?>
+<div id="mini_menu">
+    <p><a href="add_category_form.php">Add New Category</a></p>
+    <p><a href="add_post_form.php">Add Post in Current Category</a></p>
+</div>
 <div class="container">
 <!-- display a table of records -->
-<h2><?php echo $category_name; ?> </h2>
+<h2><?php echo $category_name; ?> 
 <form action="delete_category.php" method="post">
-                    <input type="hidden" name="category_id"
-                           value= <?php echo $currentID ?> >
-                    <input type="submit" value="X" id="delete">
-                </form>
+    <input type="hidden" name="category_id"value= <?php echo $currentID ?> >
+    <input type="submit" value="X" id="delete" class="button">
+</form>
+<form action="edit_category_form.php" method="post">
+    <input type="hidden" name="category_id" value= <?php echo $currentID ?> >
+    <input type="submit" value="✎" id="edit" class="button">
+</form></h2>
 <table>
 <?php foreach ($records as $record) : ?>
 <tr>
     <td><a href="replies.php.?post_id=<?php echo $record['postID']; ?>">
     <?php echo $record['postTitle']; ?></a></td>
     <td><?php echo $record['postDate']; ?></td>
+    <td>
+        <form action="delete_post.php" method="post">
+            <input type="hidden" name="post_id"value= <?php echo $record['postID'] ?> >
+            <input type="submit" value="X" id="deletePost" class="button">
+        </form>
+        <form action="edit_category_form.php" method="post">
+    <input type="hidden" name="category_id" value= <?php echo $currentID ?> >
+    <input type="submit" value="✎" id="editPost" class="button">
+</form>
+    </td>
 </tr>
+
 <?php endforeach; ?>
 </table>
-<p><a href="add_record_form.php">Add Record</a></p>
-<p><a href="category_list.php">Manage Categories</a></p>
 <?php
 include('includes/footer.php');
 ?>
