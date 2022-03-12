@@ -18,6 +18,6 @@ if ($name == null) {
     $statement->closeCursor();
 
     // Display the Category List page
-    include('category_list.php');
+    include('index.php');
 }
 ?>

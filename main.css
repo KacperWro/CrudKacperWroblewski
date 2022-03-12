@@ -5,15 +5,9 @@ body {
     background-color: #f3deb7;
 }
 
-#mini_menu{
-    background-color:#BFA677;
-    width:10em;
-    margin-top:3em;
-    position:absolute;
-    margin-left:18em;
-    height:10em;
-    border: 2px solid black;
-    border-radius: 2em 0 0 2em;
+form{
+    padding-left:1em;
+    padding-right:1em;
 }
 
 #mini_menu p{
@@ -78,6 +72,8 @@ body {
     background-color: #E5C78F;
     border: 2px solid black;
     margin-top:3em;
+    padding-right:0;
+    padding-left:0;
 }
 
 .container h2{
@@ -85,6 +81,17 @@ body {
     text-align:center;
     color: black;
     border-bottom: 1px solid black;
+}
+
+#mini_menu{
+    background-color:#BFA677;
+    width:10em;
+    margin-top:3em;
+    position:absolute;
+    margin-left:18.9em;
+    height:10em;
+    border: 2px solid black;
+    border-radius: 2em 0 0 2em;
 }
 
 header {
@@ -177,7 +184,7 @@ a {
     font-weight: bold;
 }
 a:hover {
-    color: rgb(208, 133, 4);
+    color: #f3deb7;
 }
 table {
     border: 1px solid black;
@@ -208,27 +215,3 @@ br {
 	margin-top: 1em;	
 }
 
-/********************************************************************
-* Additional styles for the record Manager application
-********************************************************************/
-#add_record_form {
-    margin: .5em 0 1em;
-}
-#add_record_form label {
-    width: 6em;
-    padding-right: 1em;
-    padding-bottom: .5em;
-    float: left;
-}
-#add_record_form input {
-    float: left;
-}
-#add_record_form input[text] {
-    width: 15em;
-}
-
-.group:after {
-    content: "";
-    display: table;
-    clear: both;
-  }

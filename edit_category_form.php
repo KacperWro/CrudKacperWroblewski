@@ -17,22 +17,23 @@ $statement->closeCursor();
 <?php
 
 ?>
-        <h2>Edit <?php echo $category['categoryName'];?></h2>
-        <form action="edit_category.php" method="post" enctype="multipart/form-data"
-              id="edit_category_form">
-
-            <input type="hidden" name="category_id"
+<h2 style="margin-bottom:1em;">Edit <?php echo $category['categoryName'];?></h2>
+    <form action="edit_category.php" method="post" id="edit_category_form">
+    <input type="hidden" name="category_id"
                    value="<?php echo $category['categoryID']; ?>">
-            <br>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Category Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="name" value="<?php echo $category['categoryName']; ?>">
+    </div>
+  </div>
+  <div class="form-group row" style="text-align:center;margin-top:1em;margin-left:8em;">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-success">Save changes</button>
+    </div>
+</form>
+<br><br>
 
-            <label>Category Name:</label>
-            <input type="input" name="name"
-                   value="<?php echo $category['categoryName']; ?>">
-            <br>
-            <label>&nbsp;</label>
-            <input type="submit" value="Save Changes">
-            <br>
-        </form>
     <?php
 include('includes/footer.php');
 ?>

@@ -98,8 +98,11 @@ if (!isset($post_id)) {
 
 <head>
 <title>Kacper's Discussion Forum</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="main.css">
 <link rel="shortcut icon" type="image/x-icon" href="includes/favicon.png">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+
 </head>
 
 <!-- the body section -->
@@ -111,12 +114,13 @@ if (!isset($post_id)) {
     <nav>
         <ul>
             <?php foreach ($categories as $category) : ?>
-            <li><a href=".?category_id=<?php echo $category['categoryID']; ?>">
+            <li><a class="navbar-brand" href=".?category_id=<?php echo $category['categoryID']; ?>">
             <?php echo $category['categoryName']; ?>
             </a>
             </li>
             <?php endforeach; ?>
-            <li><a href="users.php">Users</a></li>
+            <li><a class="navbar-brand" href="users.php">Users</a></li>
+
 </ul>
 </nav>
 </div>
