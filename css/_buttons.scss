@@ -1,0 +1,53 @@
+/*BUTTONS STYLING*/
+.topButtons{
+    margin: 0 auto;
+    margin-left:23.75%;
+    margin-top:3em;
+    margin-bottom:-3em;
+    margin-right:71em;
+    
+    button
+    {
+        border-radius:0;
+        border:2px solid $borderColour;
+        border-bottom:0;
+        border-collapse:collapse;
+        margin-right:-0.31em;
+    }
+}
+
+.buttons
+{
+    float:right;
+    margin-top:-0.25em;
+    padding-bottom:0.3em;
+    padding-right:0;
+    padding-left:0;
+    padding-bottom:0;
+
+    button
+    {
+        float:right;
+        border-radius:0;
+        font-size:0.84em;
+        border-left:1px solid $borderColour;
+    }
+}
+
+.buttonsDiv
+{
+    width:9.8%;
+    float:right;
+    margin-top:-0.5em;
+    padding-left:-1em;
+ 
+    button
+    {
+        float:right;
+        border-radius:0;
+        font-size:0.8em;
+        border-left:1px solid $borderColour;
+        border-bottom:1px solid $borderColour;
+    }
+
+}

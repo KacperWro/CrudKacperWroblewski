@@ -1,0 +1,49 @@
+/*HEADER AND NAV STYLING*/
+header 
+{
+    margin: 0;
+    border-bottom: 2px solid $borderColour;
+    background-color: $headerColour;
+    width:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    text-align:center;
+
+    h1 
+    {
+        margin: 0;
+        padding: .5em 0;
+        color: $headingColour;
+        font-weight:bold;
+    }
+}
+
+#nav
+{
+    background-color: $navBarColour;
+    border-radius:0 0 2em 2em;
+    border-bottom:2px solid $borderColour;
+    border-left:2px solid $borderColour;
+    border-right:2px solid $borderColour;
+    margin:auto;
+    margin-top:3.45em;
+    width:50%;
+
+    nav ul
+    {
+        text-align: center;
+        list-style-type: none;
+        margin-left: 0;
+        padding-left: 0;
+
+        li
+        {
+            display: inline-block;
+            padding-top:1em;
+            padding-bottom: 0.5em;
+            padding-left:1em;
+        }
+    }
+}
+    

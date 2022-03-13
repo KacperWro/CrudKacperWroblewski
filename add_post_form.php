@@ -55,7 +55,7 @@ $statement1->closeCursor();
         </div>
         <div class="form-group row" style="text-align:center;margin-top:1em;margin-left:8em;">
         <div class="col-sm-10">
-            <button type="submit" class="btn btn-success" id="add_category_button">Add new post</button>
+            <button type="submit" class="btn btn-success" id="add_category_button">Add New Post</button>
         </div>
     </form>
 </div>

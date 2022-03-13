@@ -4,7 +4,7 @@
 <!-- the head section -->
 <head>
     <title>Kacper's Discussion Forum</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <!-- the body section -->
