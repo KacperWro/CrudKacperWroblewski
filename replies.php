@@ -30,9 +30,9 @@ include('includes/header.php');
 
 
 <div class="subProfile">
-    <img src="profile_pics/<?php echo $poster['profPic']; ?>"><br>
-        <p><?php echo $poster['userName'];?></p>
-        <p class="profileP">Joined Date: <?php echo $poster['dateOfCreation'];?></p>
+    <img src="profile_pics/<?php echo $poster['profPic'] ?? 'default.jpg'; ?>"><br>
+        <p><?php echo $poster['userName'] ?? '[User Deleted]';?></p>
+        <p class="profileP">Joined Date: <?php echo $poster['dateOfCreation'] ?? 'Na';?></p>
         <p class="profileP">Posted On: <?php echo $post['postDate'];?></p>
     </div>
 
@@ -55,15 +55,16 @@ include('includes/header.php');
     
 
     <div class="subProfile">
-    <img src="profile_pics/<?php echo $currentUser['profPic']; ?>" width="100px" height="100px" style="margin-top:1em;"><br>
-        <p><?php echo $currentUser['userName'];?></p>
-        <p class="profileP" style="margin-top:-1em;">Joined Date: <?php echo $currentUser['dateOfCreation'];?></p>
+    <img src="profile_pics/<?php echo $currentUser['profPic'] ?? 'default.jpg'; ?>" width="100px" height="100px" style="margin-top:1em;"><br>
+        <p><?php echo $currentUser['userName'] ?? '[User Deleted]';?></p>
+        <p class="profileP" style="margin-top:-1em;">Joined Date: <?php echo $currentUser['dateOfCreation'] ?? 'Na';?></p>
         <p class="profileP" >Posted On: <?php echo $reply['replyDate'];?></p>
     </div>
     <div class="subContent"> 
         <div class="buttonsDiv" id="replyButtons">
         <form class="buttons" action="delete_reply.php" method="post">
             <input type="hidden" name="reply_id" value= <?php echo $reply['replyID'];?> >
+            <input type="hidden" name="post_id" value= <?php echo $post['postID'];?> >
             <button type="submit" class="btn btn-danger">X</button>
         </form>
         <form class="buttons" action="edit_reply_form.php" method="post">

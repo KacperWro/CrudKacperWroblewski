@@ -47,9 +47,9 @@ $currentID = $currentCategory['categoryID'];
     ?>
 
     <div class="subProfile">
-        <img src="profile_pics/<?php echo $currentUser['profPic']; ?>"><br>
-        <p><?php echo $currentUser['userName'];?></p>
-        <p class="profileP">Joined Date: <?php echo $currentUser['dateOfCreation'];?></p>
+        <img src="profile_pics/<?php echo $currentUser['profPic'] ?? 'default.jpg'; ?>"><br>
+        <p><?php echo $currentUser['userName'] ?? '[User Deleted]';?></p>
+        <p class="profileP">Joined Date: <?php echo $currentUser['dateOfCreation'] ?? 'Na';?></p>
         <p class="profileP">Posted On: <?php echo $record['postDate'];?></p>
     </div>
 

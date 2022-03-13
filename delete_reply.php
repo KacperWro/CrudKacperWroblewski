@@ -3,6 +3,7 @@ require_once('database.php');
 
 // Get IDs
 $reply_id = filter_input(INPUT_POST, 'reply_id', FILTER_VALIDATE_INT);
+$post_id = filter_input(INPUT_POST, 'post_id', FILTER_VALIDATE_INT);
 
 // Delete the product from the database
 if ($reply_id != false) {
@@ -17,5 +18,5 @@ if ($reply_id != false) {
 }
 
 // display the Product List page
-include('index.php');
+header("Location: replies.php.?post_id=".$post_id);
 ?>
