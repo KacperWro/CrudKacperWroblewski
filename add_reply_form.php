@@ -15,7 +15,7 @@ $post_id = filter_input(INPUT_POST, 'post_id', FILTER_VALIDATE_INT);
         <input type="hidden" name="post_id" value="<?php echo $post_id; ?>">
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Reply Content</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Please keep reply under 800 characters" name="content"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Should be between 20 and 800 characters in length" name="content" required ></textarea>
         </div>
         <div class="form-group">
             <label for="exampleFormControlSelect1">User</label>

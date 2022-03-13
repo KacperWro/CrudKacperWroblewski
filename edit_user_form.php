@@ -23,7 +23,7 @@
     <div class="form-group row">
         <label for="inputEmail3" class="col-sm-2 col-form-label">Username</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" name="name" value="<?php echo $user['userName']?>">
+            <input type="text" class="form-control" name="name" value="<?php echo $user['userName']?>" required pattern="[A-Za-z0-9]{3,20}">
         </div>
     </div>
     <div class="form-group row" style="margin-top:0.5em;">
@@ -31,7 +31,7 @@
         <div class="col-sm-10">
             <input type="hidden" name="original_image" value="<?php echo $user['profPic']; ?>" />
             <input type="hidden" name="user_id" value="<?php echo $user_id; ?>" />
-            <input type="file" name="image" accept="image/*" />
+            <input type="file" name="image" accept="image/*"/>
             <?php if ($user['profPic'] != "") { ?>
             <p style="margin-top:1em;"><img src="profile_pics/<?php echo $user['profPic']; ?>" height="150" /></p>
             <?php } ?>

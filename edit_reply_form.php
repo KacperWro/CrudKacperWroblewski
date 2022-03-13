@@ -23,7 +23,7 @@ $statement->closeCursor();
     <input type="hidden" name="reply_id" value="<?php echo $reply_id; ?>">
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Post Content</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="content"><?php echo $reply['replyContent'];?></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="content" required><?php echo $reply['replyContent'];?></textarea>
         </div>
         <div class="form-group">
             <label for="exampleFormControlSelect1">User</label>

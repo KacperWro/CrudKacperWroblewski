@@ -24,7 +24,7 @@ $statement->closeCursor();
     <div class="form-group row">
         <label for="inputEmail3" class="col-sm-2 col-form-label">Category Name</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" name="name" value="<?php echo $category['categoryName']; ?>">
+            <input type="text" class="form-control" name="name" value="<?php echo $category['categoryName']; ?>" required pattern="[A-Za-z0-9 ]{3,30}">
         </div>
     </div>
     <div class="form-group row" style="text-align:center;margin-top:1em;margin-left:8em;">

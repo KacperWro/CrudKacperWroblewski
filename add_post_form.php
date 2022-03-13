@@ -27,11 +27,11 @@ $statement1->closeCursor();
     <form action="add_post.php" method="post" enctype="multipart/form-data" id="add_post_form">
         <div class="form-group">
             <label for="exampleFormControlInput1">Post Title</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Post Title" name="title">
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Should be between 3 and 30 characters in length" name="title" required pattern="[A-Za-z0-9,:- ]{3,30}">
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Post Content</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Please keep post under 2000 characters" name="content"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Post should be between 20 and 800 characters in length" name="content" required></textarea>
         </div>
         <div class="form-group">
             <label for="exampleFormControlSelect1">Category</label>

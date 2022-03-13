@@ -23,11 +23,11 @@ $statement->closeCursor();
     <input type="hidden" name="post_id" value="<?php echo $post_id; ?>">
         <div class="form-group">
             <label for="exampleFormControlInput1">Post Title</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" value="<?php echo $post['postTitle'];?>" name="title">
+            <input type="text" class="form-control" id="exampleFormControlInput1" value="<?php echo $post['postTitle'];?>" name="title" required pattern="[A-Za-z0-9,:- ]{3,30}">
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Post Content</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="content"><?php echo $post['postContent'];?></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="content" required pattern="{20,800}"><?php echo $post['postContent'];?></textarea>
         </div>
         <div class="form-group">
             <label for="exampleFormControlSelect1">Category</label>

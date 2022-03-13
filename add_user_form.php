@@ -13,13 +13,13 @@
     <div class="form-group row">
         <label for="inputEmail3" class="col-sm-2 col-form-label">Username</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" name="name" placeholder="Username">
+            <input type="text" class="form-control" name="name" placeholder="Username must be alphanumeric and 3-20 characters in length. It must not contain spaces" required pattern="[A-Za-z0-9]{3,20}">
         </div>
     </div>
     <div class="form-group row" style="margin-top:0.5em;">
         <label for="inputEmail3" class="col-sm-2 col-form-label">Profile Picture</label>
         <div class="col-sm-10">
-            <input type="file" name="image" accept="image/*" />
+            <input type="file" name="image" accept="image/*" required/>
         </div>
     </div>
     <div class="form-group row" style="text-align:center;margin-top:1em;margin-left:8em;">

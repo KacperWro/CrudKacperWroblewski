@@ -19,7 +19,7 @@
     <div class="form-group row">
         <label for="inputEmail3" class="col-sm-2 col-form-label">Category Name</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" name="name" placeholder="Category name">
+            <input type="text" class="form-control" name="name" placeholder="Must be alphanumeric and 3-30 characters in length" required pattern="[A-Za-z0-9 ]{3,30}">
         </div>
     </div>
     <div class="form-group row" style="text-align:center;margin-top:1em;margin-left:8em;">
