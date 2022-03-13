@@ -19,11 +19,12 @@
 
 ?>
 <h2 style="margin-bottom:1em;">Edit <?php echo $user['userName']?></h2>
-<form action="edit_user.php" method="post" id="edit_user_form" enctype="multipart/form-data">
+<form action="edit_user.php" method="post" id="edit_user_form" enctype="multipart/form-data" name="userForm" onSubmit="return validateUserForm()">
     <div class="form-group row">
         <label for="inputEmail3" class="col-sm-2 col-form-label">Username</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" name="name" value="<?php echo $user['userName']?>" required pattern="[A-Za-z0-9]{3,20}">
+            <input type="text" class="form-control" name="name" value="<?php echo $user['userName']?>" onChange="return validateUserForm()">
+            <p id="userNameError" style="font-weight:bold;"></p>
         </div>
     </div>
     <div class="form-group row" style="margin-top:0.5em;">

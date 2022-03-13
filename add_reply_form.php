@@ -11,11 +11,12 @@ $post_id = filter_input(INPUT_POST, 'post_id', FILTER_VALIDATE_INT);
 
     ?>
     <h2 style="margin-bottom:1em;">Add New Reply</h2>
-    <form action="add_reply.php" method="post" enctype="multipart/form-data" id="add_reply_form">
+    <form action="add_reply.php" method="post" enctype="multipart/form-data" id="add_reply_form" name="replyForm" onSubmit="return validateReplyForm()">
         <input type="hidden" name="post_id" value="<?php echo $post_id; ?>">
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Reply Content</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Should be between 20 and 800 characters in length" name="content" required ></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Should be between 20 and 800 characters in length" name="content" onChange="return validateReplyForm()"></textarea>
+            <p id="replyContentError" style="font-weight:bold;"></p>
         </div>
         <div class="form-group">
             <label for="exampleFormControlSelect1">User</label>

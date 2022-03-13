@@ -24,14 +24,16 @@ $statement1->closeCursor();
 
     ?>
     <h2 style="margin-bottom:1em;">Add Forum Post</h2>
-    <form action="add_post.php" method="post" enctype="multipart/form-data" id="add_post_form">
+    <form action="add_post.php" method="post" enctype="multipart/form-data" id="add_post_form" name="postForm" onSubmit="return validateForumPostForm()">
         <div class="form-group">
             <label for="exampleFormControlInput1">Post Title</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Should be between 3 and 30 characters in length" name="title" required pattern="[A-Za-z0-9,:- ]{3,30}">
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Should be between 3 and 30 characters in length" name="title" pattern="[A-Za-z0-9,:- ]{3,30}" onChange="return validateForumPostForm()">
+            <p id="postTitleError" style="font-weight:bold;"></p>
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Post Content</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Post should be between 20 and 800 characters in length" name="content" required></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Post should be between 20 and 800 characters in length" name="content" onChange="return validateForumPostForm()"></textarea>
+            <p id="postContentError" style="font-weight:bold;"></p>
         </div>
         <div class="form-group">
             <label for="exampleFormControlSelect1">Category</label>

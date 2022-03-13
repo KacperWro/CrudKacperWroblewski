@@ -107,7 +107,7 @@ if (!isset($post_id))
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <link rel="shortcut icon" type="image/x-icon" href="includes/favicon.png">
-
+<script src="javascript/script.js"></script>
 </head>
 
 <!-- the body section -->

@@ -19,11 +19,12 @@ $statement->closeCursor();
 ?>
         <h2 style="margin-bottom:1em;">Edit Reply</h2>
 
-        <form action="edit_reply.php" method="post" enctype="multipart/form-data" id="edit_reply_form">
+        <form action="edit_reply.php" method="post" enctype="multipart/form-data" id="edit_reply_form" name="replyForm" onSubmit="return validateReplyForm()">
     <input type="hidden" name="reply_id" value="<?php echo $reply_id; ?>">
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Post Content</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="content" required><?php echo $reply['replyContent'];?></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="content" onChange="return validateReplyForm()"><?php echo $reply['replyContent'];?></textarea>
+            <p id="replyContentError" style="font-weight:bold;"></p>
         </div>
         <div class="form-group">
             <label for="exampleFormControlSelect1">User</label>

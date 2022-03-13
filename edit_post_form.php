@@ -19,15 +19,17 @@ $statement->closeCursor();
 ?>
         <h2 style="margin-bottom:1em;">Edit <?php echo $post['postTitle'];?></h2>
 
-    <form action="edit_post.php" method="post" enctype="multipart/form-data" id="edit_post_form">
+    <form action="edit_post.php" method="post" enctype="multipart/form-data" id="edit_post_form" name="postForm" onSubmit="return validateForumPostForm()">
     <input type="hidden" name="post_id" value="<?php echo $post_id; ?>">
         <div class="form-group">
             <label for="exampleFormControlInput1">Post Title</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" value="<?php echo $post['postTitle'];?>" name="title" required pattern="[A-Za-z0-9,:- ]{3,30}">
+            <input type="text" class="form-control" id="exampleFormControlInput1" value="<?php echo $post['postTitle'];?>" name="title" pattern="[A-Za-z0-9,:- ]{3,30}"  onChange="return validateForumPostForm()">
+            <p id="postTitleError" style="font-weight:bold;"></p>
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Post Content</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="content" required pattern="{20,800}"><?php echo $post['postContent'];?></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="content" pattern="{20,800}" onChange="return validateForumPostForm()"><?php echo $post['postContent'];?></textarea>
+            <p id="postContentError" style="font-weight:bold;"></p>
         </div>
         <div class="form-group">
             <label for="exampleFormControlSelect1">Category</label>
