@@ -3,10 +3,13 @@
 $name = $name = filter_input(INPUT_POST, 'name');
 
 // Validate inputs
-if ($name == null) {
+if ($name == null)
+{
     $error = "Invalid category data. Check all fields and try again.";
     include('error.php');
-} else {
+} 
+else 
+{
     require_once('database.php');
 
     // Add the product to the database

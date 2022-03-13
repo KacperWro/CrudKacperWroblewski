@@ -4,9 +4,10 @@
 require_once('database.php');
 
 // Get category ID
-if (!isset($category_id)) {
-$category_id = filter_input(INPUT_GET, 'category_id', 
-FILTER_VALIDATE_INT);
+if (!isset($category_id)) 
+{
+    $category_id = filter_input(INPUT_GET, 'category_id', 
+    FILTER_VALIDATE_INT);
 }
 
 if ($category_id == null || $category_id == false)
@@ -56,14 +57,16 @@ $users = $statement4->fetchAll();
 $statement4->closeCursor();
 
 // Get post ID
-if (!isset($post_id)) {
+if (!isset($post_id))
+{
     $post_id = filter_input(INPUT_GET, 'post_id', 
     FILTER_VALIDATE_INT);
-    if ($post_id == NULL || $post_id == FALSE) {
 
+    if ($post_id == NULL || $post_id == FALSE) 
+    {
         $post_id = 1;
     }
-    }
+}
     
     // Get name for current post
     $queryPost = "SELECT * FROM forumPosts
@@ -99,9 +102,11 @@ if (!isset($post_id)) {
 <head>
 <title>Kacper's Discussion Forum</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="main.css">
 <link rel="shortcut icon" type="image/x-icon" href="includes/favicon.png">
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
 
 </head>
 
@@ -114,13 +119,13 @@ if (!isset($post_id)) {
     <nav>
         <ul>
             <?php foreach ($categories as $category) : ?>
-            <li><a class="navbar-brand" href=".?category_id=<?php echo $category['categoryID']; ?>">
-            <?php echo $category['categoryName']; ?>
-            </a>
+            <li>
+                <a class="navbar-brand" href=".?category_id=<?php echo $category['categoryID']; ?>"><?php echo $category['categoryName']; ?></a>
             </li>
             <?php endforeach; ?>
-            <li><a class="navbar-brand" href="users.php">Users</a></li>
-
+            <li>
+                <a class="navbar-brand" href="users.php">Users</a>
+            </li>
 </ul>
 </nav>
 </div>

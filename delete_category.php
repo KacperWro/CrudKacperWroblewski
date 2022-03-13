@@ -24,7 +24,8 @@ if ($category_id == null || $category_id == false) {
     include('error.php');
 }
 else if ($count <= 1){
-    echo "Cannot delete. Must have at least one category";
+    $error = "Cannot delete. Must have at least one category";
+    include('error.php');
 }
 else {
     // Add the product to the database  

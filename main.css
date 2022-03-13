@@ -3,6 +3,7 @@
 
 body {
     background-color: #f3deb7;
+    font-family: 'Open Sans', Helvetica, sans-serif;
 }
 
 form{
@@ -14,17 +15,79 @@ form{
     padding-left:1em;
 }
 
-#edit{
+.subContent h5{
+    width:100%;
+}
+
+.buttons{
     float:right;
-    margin-top:-1.55em;
-    background-color:rgb(15, 228, 44);
-    border:none;
-    border-left:1.5px solid black;
-    font-size:0.9em;
-    cursor:pointer;
-    height:2.1em;
-    padding-left:0.6em;
-    padding-right:0.6em;
+    margin-top:-0.25em;
+    padding-bottom:0.3em;
+    padding-right:0;
+    padding-left:0;
+    padding-bottom:0;
+}
+
+.buttons button
+{
+    float:right;
+    border-radius:0;
+    font-size:0.8em;
+    border-left:1px solid black;
+}
+
+.buttonsDiv{
+    width:9.8%;
+    float:right;
+    margin-top:-0.5em;
+    padding-left:-1em;
+}
+
+.buttonsDiv button{
+    float:right;
+    border-radius:0;
+    font-size:0.8em;
+    border-left:1px solid black;
+    border-bottom:1px solid black;
+}
+
+.subProfile{
+    display:inline-block;
+    width:20%;
+    border-right:
+    2px solid black;
+    text-align:center;
+    border-top:2px solid black;
+}
+
+.subProfile .ProfileP{
+    margin-top:-1em;
+}
+
+.subProfile img{
+    margin-top:1em;
+    width:100px; 
+    height:100px;
+}
+
+.subContent{
+    display:block;
+    width:80%;
+    float:right;
+    height:12em;
+    border-top:2px solid black;
+    margin-bottom:-1em;
+}
+
+.subContent p{
+    padding-left:1em;
+    padding-right:1em;
+}
+
+.subContent h5{
+    text-align:center;
+    margin-top:0.5em;
+    font-weight:bold;
 }
 
 #delete{ 
@@ -64,13 +127,30 @@ form{
     margin-right:0.5em;
 }
 
+.topButtons{
+    margin: 0 auto;
+    margin-left:23.95%;
+    margin-top:3em;
+    margin-bottom:-3em;
+    margin-right:72.6em;
+}
+
+.topButtons button{
+    border-radius:0;
+    border:2px solid black;
+    border-bottom:0;
+    border-collapse:collapse;
+    margin-right:-0.31em;
+}
+
 .container {
     /* margin-top: 0; */
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', Helvetica, sans-serif;
     width: 1000px;
     margin: 0 auto;
     background-color: #E5C78F;
     border: 2px solid black;
+    border-top:none;
     margin-top:3em;
     padding-right:0;
     padding-left:0;
@@ -81,6 +161,8 @@ form{
     text-align:center;
     color: black;
     border-bottom: 1px solid black;
+    border-top: 2px solid black;
+    font-weight:bold;
 }
 
 #mini_menu{
@@ -182,18 +264,19 @@ li {
 a {
     color: rgb(41, 64, 124);
     font-weight: bold;
+    text-decoration:none;
 }
 a:hover {
-    color: #f3deb7;
+    color: whitesmoke;
 }
 table {
     border: 1px solid black;
-    border-top:2px solid black;
+    border-top:none;
     border-collapse: collapse;
     width:100%;
 }
 td, th {
-    border: 1px dashed black;
+    border: 1px solid black;
     padding: .2em .5em .2em .5em;
     vertical-align: top;
     text-align: left;
