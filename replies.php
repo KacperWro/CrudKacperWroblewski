@@ -5,8 +5,12 @@ require_once('database.php');
 <?php
 include('includes/header.php');
 ?>
+
 <div class="topButtons" >
-    <a href="add_post_form.php"><button type="button" class="btn btn-primary">Add New Reply</button></a>
+<form action="add_reply_form.php" method="post" style="margin-left:-1em;">
+            <input type="hidden" name="post_id" value= <?php echo $post['postID'];?>>
+            <button type="submit" class="btn btn-primary">Add New Reply</button>
+        </form>
 </div>
 <div class="container">
 <!-- display a table of records -->
@@ -23,6 +27,8 @@ include('includes/header.php');
     $statement2->closeCursor();
 ?>
 
+
+
 <div class="subProfile">
     <img src="profile_pics/<?php echo $poster['profPic']; ?>"><br>
         <p><?php echo $poster['userName'];?></p>
@@ -31,7 +37,7 @@ include('includes/header.php');
     </div>
 
 <div class="subContent"> 
-    <h5><?php echo $post['postTitle']; ?></h5>
+    <h5><?php echo $post['postTitle']; ?>    </h5>
     <p><?php echo $post['postContent']; ?></p>
 <?php foreach ($replies as $reply) : ?>
 <tr>
@@ -46,6 +52,7 @@ include('includes/header.php');
         $currentUser = $statement2->fetch();
         $statement2->closeCursor();
     ?>
+    
 
     <div class="subProfile">
     <img src="profile_pics/<?php echo $currentUser['profPic']; ?>" width="100px" height="100px" style="margin-top:1em;"><br>
@@ -54,6 +61,16 @@ include('includes/header.php');
         <p class="profileP" >Posted On: <?php echo $reply['replyDate'];?></p>
     </div>
     <div class="subContent"> 
+        <div class="buttonsDiv" id="replyButtons">
+        <form class="buttons" action="delete_reply.php" method="post">
+            <input type="hidden" name="reply_id" value= <?php echo $reply['replyID'];?> >
+            <button type="submit" class="btn btn-danger">X</button>
+        </form>
+        <form class="buttons" action="edit_reply_form.php" method="post">
+            <input type="hidden" name="reply_id" value= <?php echo $reply['replyID'];?>>
+            <button type="submit" class="btn btn-success">✎</button>
+        </form>
+</div>
     <p style="margin-top:1em;"><?php echo $reply['replyContent']; ?></p>
 </div>
     

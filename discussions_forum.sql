@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS `forumPosts` (
   `postID` int(5) NOT NULL,
   `categoryID` int(11) NOT NULL,
   `userID` int(5) NOT NULL,
-  `postContent` varchar(2000),
+  `postContent` varchar(800),
   `postTitle` varchar(100),
   `postDate` datetime,
   PRIMARY KEY (`postID`),
@@ -68,12 +68,15 @@ CREATE TABLE IF NOT EXISTS `forumReplies` (
   `replyID` int(5) NOT NULL,
   `postID` int(5) NOT NULL,
   `userID` int(5) NOT NULL,
-  `replyContent` varchar(2000),
+  `replyContent` varchar(800),
   `replyDate` datetime,
   PRIMARY KEY (`replyID`),
   FOREIGN KEY (`postID`) REFERENCES `forumPosts`(`postID`),
   FOREIGN KEY (`userID`) REFERENCES `users` (`userID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE `forumReplies`
+  MODIFY `replyID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 INSERT INTO `categories` (`categoryID`, `categoryName`) VALUES
 (1, "Gaming"),

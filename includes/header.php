@@ -115,6 +115,7 @@ if (!isset($post_id))
 <header><h1>Kacper's Discussion Forum</h1>
     
 </header>
+<div id="contentWrap">
 <div id="nav">
     <nav>
         <ul>

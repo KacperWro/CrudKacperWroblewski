@@ -1,6 +1,7 @@
 </div><!-- close div container -->
-<footer>
+<div id="footer">
     <p><strong>&copy; <?php echo date("Y"); ?> Kacper CRUD Application</strong></p>
-</footer>
+</div>
+</div>
 </body>
 </html>
