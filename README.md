@@ -1,4 +1,4 @@
-# Kacper's PHP Discussion Forum CRUD Application
+# Kacper's PHP Discussion Forum CRUD Application ![Discussions Logo](https://github.com/KacperWro/CrudKacperWroblewski/blob/main/includes/favicon.png "Discussions Logo")
 The theme for my CRUD application is a discussion forum. This is similar to Reddit and other similar sites where people can create posts in a specific category, and other users are able to comment on it.
 
 ### Instructions
