@@ -9,4 +9,4 @@ The theme for my CRUD application is a discussion forum. This is similar to Redd
 * Run index.php from Visual Studio Code or another IDE of your choice
 * Enjoy the show!
 
-## Alternatively, you can see my application running live by clicking here [https://mysql06.comp.dkit.ie/D00227356/CrudKacperWroblewski/index.php]
+## Alternatively, you can see my application running live by clicking [here](https://mysql06.comp.dkit.ie/D00227356/CrudKacperWroblewski/index.php)
