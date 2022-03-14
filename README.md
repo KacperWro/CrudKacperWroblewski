@@ -1,4 +1,4 @@
-# Kacper's PHP Discussion Forum CRUD Application
+# Kacper's PHP Discussion Forum CRUD Application <img src="https://github.com/KacperWro/CrudKacperWroblewski/blob/main/includes/favicon.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" height="40" />
 The theme for my CRUD application is a discussion forum. This is similar to Reddit and other similar sites where people can create posts in a specific category, and other users are able to comment on it.
 
 ### Instructions
@@ -9,4 +9,5 @@ The theme for my CRUD application is a discussion forum. This is similar to Redd
 * Run index.php from Visual Studio Code or another IDE of your choice
 * Enjoy the show!
 
-## Alternatively, you can see my application running live by clicking here [https://mysql06.comp.dkit.ie/D00227356/CrudKacperWroblewski/index.php]
+## Alternatively, you can see my application running live by clicking the link below
+[Link to live application](https://mysql06.comp.dkit.ie/D00227356/CrudKacperWroblewski/index.php)
