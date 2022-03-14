@@ -11,3 +11,19 @@ The theme for my CRUD application is a discussion forum. This is similar to Redd
 
 ## Alternatively, you can see my application running live by clicking the link below
 [Link to live application](https://mysql06.comp.dkit.ie/D00227356/CrudKacperWroblewski/index.php)
+
+# Some screenshots of my application
+### Main page with posts listed from a selected category
+![Index page](https://github.com/KacperWro/CrudKacperWroblewski/blob/main/screenshots/index.png "Index page")
+
+### A selected post and all comments related to that post
+![Post page](https://github.com/KacperWro/CrudKacperWroblewski/blob/main/screenshots/post.png "Post page")
+
+### A page listing all the users in the database
+![User page](https://github.com/KacperWro/CrudKacperWroblewski/blob/main/screenshots/users.png "User page")
+
+### A page where a selected user profile is being edited
+![Edit page](https://github.com/KacperWro/CrudKacperWroblewski/blob/main/screenshots/editForm.png "Edit page")
+
+### A page where a new post is being added to a specific category
+![Edit page](https://github.com/KacperWro/CrudKacperWroblewski/blob/main/screenshots/addForm.png "Edit page")
