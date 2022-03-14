@@ -27,10 +27,15 @@ SET time_zone = "+00:00";
 -- Table structure for table `categories`
 --
 
-DROP DATABASE IF EXISTS discussions_forum;
+-- DROP DATABASE IF EXISTS discussions_forum;
 
-CREATE DATABASE`discussions_forum` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `discussions_forum`;
+-- CREATE DATABASE`discussions_forum` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+-- USE `discussions_forum`;
+
+DROP TABLE IF EXISTS `forumReplies`;
+DROP TABLE IF EXISTS `forumPosts`;
+DROP TABLE IF EXISTS `users`;
+DROP TABLE IF EXISTS `categories`;
 
 CREATE TABLE IF NOT EXISTS `categories` (
   `categoryID` int(11) NOT NULL,
